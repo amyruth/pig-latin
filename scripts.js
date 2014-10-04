@@ -25,3 +25,16 @@ var pigLatin = function(string){
     return string +"ay";
   }
 };
+
+$(document).ready(function(){
+  $('form#english').submit(function(event){
+    var sourceWord = $('input#word').val();
+    var translated = pigLatin(sourceWord);
+
+    $('#original').text(sourceWord);
+    $('#piglatin').text(translated);
+    $('#translation').show();
+
+    event.preventDefault();
+  });
+});
