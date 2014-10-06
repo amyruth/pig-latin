@@ -1,5 +1,6 @@
+'use strict';
+
 var pigLatin = function(string){
-  var stringArray;
   var cutIndex, endString, remString;
   var vowels = ["a","e","i","o","u"];
 
@@ -9,6 +10,7 @@ var pigLatin = function(string){
     remString = string.substring(cutIndex);
     return remString + endString + "ay";
   }else{
+    
     for(var i = 0; i<string.length; i+=1){
       for(var j = 0; j < vowels.length; j+=1){
         if(string[i] === vowels[j]){
